@@ -116,7 +116,7 @@ public static boolean exist=false;
 		
 		//Create a connection to database.
 		try {
-			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:8080/guproject","USER","PASS");
+			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/guproject","USER","PASS");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
