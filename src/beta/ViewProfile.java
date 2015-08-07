@@ -212,7 +212,7 @@ public class ViewProfile implements ActionListener  {
 		}
 		try {
 			con = DriverManager.getConnection(
-					"jdbc:mysql://127.0.0.1:8080/guproject","USER","PASS");
+					"jdbc:mysql://127.0.0.1:3306/guproject","USER","PASS");
 			//System.out.println("Connection working");
 
 		} catch (Exception e) {
