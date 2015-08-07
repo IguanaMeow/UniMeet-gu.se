@@ -67,7 +67,7 @@ public class SendMsg extends JPanel {
 		}
 		// Connection con = null;
 		con = DriverManager.getConnection(
-				"jdbc:mysql://127.0.0.1:8080/guproject","USER","PASS");
+				"jdbc:mysql://127.0.0.1:3306/guproject","USER","PASS");
 		// stmt = con.createStatement();
 	}
 
