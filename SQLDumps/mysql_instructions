@@ -1,0 +1,28 @@
+----- create import export database -----
+// create
+mysql -uroot -p
+create database guproject;
+exit;
+
+// import
+mysql -uroot -p guproject < guproject.sql
+
+//export
+mysqldump -uroot -p guproject > guproject.sql
+
+----- give access to any remote host -----
+sudo nano /etc/mysql/my.cnf
+or 
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf 
+change line:   bind-address = 127.0.0.1
+to line:    #bind-address = 127.0.0.1
+ctrl+x to save
+
+----- gives access for a remote host to connect to mysqldatabase as root with a password -----
+mysql -u root -p
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED by 'pass' WITH GRANT OPTION;
+exit;
+
+----- connect to mysql root from remote ip -----
+mysql -u root -p -h remote-ip
+service mysql restart
